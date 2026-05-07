@@ -15,3 +15,22 @@ variable "eks_version" {
   type        = string
   default     = "1.35"
 }
+
+variable "mongodb_instance_type" {
+  description = "Instance type for MongoDB EC2"
+  type        = string
+  default     = "t3.micro"
+}
+
+variable "mongodb_username" {
+  description = "MongoDB admin username"
+  type        = string
+  default     = "taskyadmin"
+}
+
+variable "mongodb_password" {
+  description = "MongoDB admin password"
+  type        = string
+  sensitive   = true
+  default     = "TaskyPassword123!"
+}
