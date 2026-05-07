@@ -5,5 +5,13 @@ variable "resource_prefix" {
 }
 
 variable "region" {
-  default = "us-east-1"
+  description = "AWS region"
+  type        = string
+  default     = "us-east-1"
+}
+
+variable "eks_version" {
+  description = "EKS Kubernetes version"
+  type        = string
+  default     = "1.35"
 }
