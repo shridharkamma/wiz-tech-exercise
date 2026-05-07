@@ -17,3 +17,5 @@
 - Public load balancer
 - MongoDB EC2
 - Public S3 backup bucket
+
+By Shridhar Kamma
