@@ -22,4 +22,11 @@ Thumbs.db
 
 *.pem
 WizTestv1MongoKey
-WizTestv1MongoKey.pub
+
+# SSH private keys
+WizTestv1MongoKey
+terraform/WizTestv1MongoKey
+*.pem
+
+# Allow Terraform public key
+!terraform/WizTestv1MongoKey.pub
