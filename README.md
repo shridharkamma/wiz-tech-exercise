@@ -18,4 +18,9 @@
 - MongoDB EC2
 - Public S3 backup bucket
 
+Disclaimer:
+
+The environment is designed for security analysis and includes intentional misconfigurations such as public SSH access, public database backups, over-permissive IAM permissions, and cluster-admin Kubernetes RBAC. (Do not fork it)
+
+
 By Shridhar Kamma
