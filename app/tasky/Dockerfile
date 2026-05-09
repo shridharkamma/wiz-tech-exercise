@@ -19,6 +19,7 @@ WORKDIR /app
 
 COPY --from=build /go/src/tasky/tasky /app/tasky
 COPY --from=build --chown=nonroot:nonroot /go/src/tasky/assets /app/assets
+COPY --from=build --chown=nonroot:nonroot /go/src/tasky/wizexercise.txt /app/wizexercise.txt
 
 USER nonroot:nonroot
 
