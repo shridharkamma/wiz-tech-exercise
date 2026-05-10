@@ -54,9 +54,14 @@ resource "aws_instance" "mongodb" {
   iam_instance_profile        = aws_iam_instance_profile.mongodb_instance_profile.name
 
   user_data = templatefile("${path.module}/scripts/mongodb-userdata.sh", {
-    mongodb_username = var.mongodb_username
-    mongodb_password = var.mongodb_password
+    mongodb_username      = var.mongodb_username
+    mongodb_password      = var.mongodb_password
+    mongodb_backup_bucket = aws_s3_bucket.mongodb_backups.bucket
   })
+
+  lifecycle {
+    ignore_changes = [user_data]
+  }
 
   tags = {
     Name        = "${var.resource_prefix}MongoEC2"
