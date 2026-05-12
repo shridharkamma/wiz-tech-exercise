@@ -34,3 +34,9 @@ variable "mongodb_password" {
   sensitive   = true
   default     = "TaskyPassword123!"
 }
+
+variable "region2" {
+  description = "AWS region2"
+  type        = string
+  default     = "us-west-1"
+}
